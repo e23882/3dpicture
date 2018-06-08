@@ -24,5 +24,26 @@ namespace DrawPic
         {
             InitializeComponent();
         }
+
+        private void cbPic_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbPic.SelectedIndex ==0)
+                ctContent.Content = new Picture.UcPicture1();
+            if (cbPic.SelectedIndex == 1)
+                ctContent.Content = new Picture.UcPicture2();
+            if (cbPic.SelectedIndex == 2)
+                ctContent.Content = new Picture.UcPicture3();
+            if (cbPic.SelectedIndex == 3)
+                ctContent.Content = new Picture.UcPicture4();
+        }
+
+        private void cbPic_Loaded(object sender, RoutedEventArgs e)
+        {
+            cbPic.Items.Add("Picture1");
+            cbPic.Items.Add("Picture2");
+            cbPic.Items.Add("Picture3");
+            cbPic.Items.Add("Picture4");
+            cbPic.SelectedIndex = 0;
+        }
     }
 }
