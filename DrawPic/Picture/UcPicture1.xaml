@@ -6,12 +6,7 @@
              xmlns:local="clr-namespace:DrawPic.Picture"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="gdPicture1" 
-          MouseEnter="gdPicture1_MouseEnter"
-          MouseLeave="gdPicture1_MouseLeave"
-          MouseLeftButtonDown="gdPicture1_MouseLeftButtonDown"
-          MouseLeftButtonUp="gdPicture1_MouseLeftButtonUp"
-          >
+    <Grid x:Name="gdPicture1">
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
@@ -22,11 +17,12 @@
             <ColumnDefinition Width="500" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Viewport3D Name="viewport3D1" Grid.Row="1" Grid.Column="0">
+        <Viewport3D Name="viewport3D1" Grid.Row="1" Grid.RowSpan="3" Grid.Column="0">
 
             <Viewport3D.Camera>
-                <PerspectiveCamera x:Name = "camMain" Position = "6 5 4" LookDirection = "-6 -5 -4">
-                </PerspectiveCamera>
+                <PerspectiveCamera x:Name = "camMain" Position = "6 5 4" LookDirection = "-6 -5 -4"  FieldOfView="25"/>
+
+
             </Viewport3D.Camera>
 
             <ModelVisual3D>
@@ -66,16 +62,38 @@
                         </RotateTransform3D.Rotation>
                     </RotateTransform3D>
                 </ModelVisual3D.Transform>
-
             </ModelVisual3D>
         </Viewport3D>
-
-        <Slider Grid.Row="2" Grid.Column="0" Height = "23" HorizontalAlignment = "Left"  
-          Name = "slider1" 
-         VerticalAlignment = "Top" 
-        Width="500"
-         Maximum = "360" 
-         Value = "{Binding ElementName = rotate, Path=Angle}" />
-
+        <Grid x:Name="gdControl" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Background="Gray" MouseMove="gdControl_MouseMove" MouseWheel="gdControl_MouseWheel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="1"  Width="250">
+                <Rectangle Width="25" Height="25" Fill="Black" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Gray" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Brown" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Red" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Orange" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Yellow" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Green" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="LightBlue" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="DarkBlue" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Purple" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+            </DockPanel>
+            <DockPanel Grid.Row="2"  Width="250">
+                <Rectangle Width="25" Height="25" Fill="White" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="LightGray" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Bisque" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="PaleGreen" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Olive" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Khaki" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="BurlyWood" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="CadetBlue" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="DarkSlateGray" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+                <Rectangle Width="25" Height="25" Fill="Aquamarine" DockPanel.Dock="Left" MouseEnter="Rectangle_MouseEnter"/>
+            </DockPanel>
+        </Grid>
     </Grid>
 </UserControl>
