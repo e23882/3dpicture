@@ -53,7 +53,7 @@ namespace DrawPic.Picture
 
         private void Rectangle_MouseEnter(object sender, MouseEventArgs e)
         {
-            
+            ambLightMain.Color = (Color)ColorConverter.ConvertFromString((sender as Rectangle).Fill.ToString());
         }
     }
 }

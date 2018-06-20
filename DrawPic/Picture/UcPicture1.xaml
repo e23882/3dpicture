@@ -14,8 +14,8 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500" />
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="600" />
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Viewport3D Name="viewport3D1" Grid.Row="1" Grid.RowSpan="3" Grid.Column="0">
 
@@ -27,8 +27,14 @@
 
             <ModelVisual3D>
                 <ModelVisual3D.Content>
-                    <DirectionalLight x:Name = "dirLightMain" Direction = "-1,-1,-1">
+                    <DirectionalLight x:Name = "dirLightMain" Direction = "-1,-1,-1" Color="White">
                     </DirectionalLight>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <AmbientLight x:Name = "ambLightMain" Color="Blue">
+                    </AmbientLight>
                 </ModelVisual3D.Content>
             </ModelVisual3D>
 
