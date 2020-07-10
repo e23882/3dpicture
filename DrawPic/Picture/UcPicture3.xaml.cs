@@ -26,7 +26,7 @@ namespace DrawPic.Picture
         {
             InitializeComponent();
             ObjReader CurrentHelixObjReader = new ObjReader();
-            Model3DGroup MyModel = CurrentHelixObjReader.Read(@".\3dModel\IronMan.obj");
+            Model3DGroup MyModel = CurrentHelixObjReader.Read(@".\3dModel\Rigged Hand.obj");
             model.Content = MyModel;
         }
     }

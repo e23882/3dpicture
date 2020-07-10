@@ -39,10 +39,8 @@ namespace DrawPic
 
         private void cbPic_Loaded(object sender, RoutedEventArgs e)
         {
-            cbPic.Items.Add("Picture1");
-            cbPic.Items.Add("Picture2");
-            cbPic.Items.Add("Picture3");
-            cbPic.Items.Add("Picture4");
+            cbPic.Items.Add("Picture");
+            cbPic.Items.Add("IronMan");
             cbPic.SelectedIndex = 0;
         }
     }

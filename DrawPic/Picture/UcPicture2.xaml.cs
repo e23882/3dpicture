@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
+using System.Windows.Documents; 
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -26,7 +26,7 @@ namespace DrawPic.Picture
         {
             InitializeComponent();
             ObjReader CurrentHelixObjReader = new ObjReader();
-            Model3DGroup MyModel = CurrentHelixObjReader.Read(@".\3dModel\house interior.obj");
+            Model3DGroup MyModel = CurrentHelixObjReader.Read(@".\3dModel\IronMan.obj");
             model.Content = MyModel;
         }
     }
